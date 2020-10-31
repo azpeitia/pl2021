@@ -35,9 +35,10 @@ class Yylex {
    * Translates characters to character classes
    */
   private static final String ZZ_CMAP_PACKED = 
-    "\11\0\1\5\1\5\1\7\1\7\1\6\22\0\1\5\3\0\1\4"+
-    "\13\0\12\2\1\0\1\5\1\0\1\3\3\0\32\1\4\0\1\1"+
-    "\1\0\32\1\1\0\1\5\10\0\1\7\u1fa2\0\1\7\1\7\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\udfe6\0";
+    "\11\0\1\10\1\11\2\0\1\11\22\0\1\10\1\0\1\4\1\0"+
+    "\1\5\13\0\12\2\1\0\1\7\1\0\1\3\3\0\32\1\1\0"+
+    "\1\6\2\0\1\1\1\0\15\1\1\13\3\1\1\14\1\1\1\12"+
+    "\6\1\1\0\1\10\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uff93\0";
 
   /** 
    * Translates characters to character classes
@@ -50,10 +51,12 @@ class Yylex {
   private static final int [] ZZ_ACTION = zzUnpackAction();
 
   private static final String ZZ_ACTION_PACKED_0 =
-    "\3\0\3\1\1\2\1\3\1\4\1\0\1\5\1\6";
+    "\3\0\4\1\3\2\1\3\1\4\1\5\1\0\1\6"+
+    "\1\0\1\7\1\0\1\10\1\11\1\12\1\5\1\13"+
+    "\1\14\1\15\1\16\1\17\1\20";
 
   private static int [] zzUnpackAction() {
-    int [] result = new int[12];
+    int [] result = new int[28];
     int offset = 0;
     offset = zzUnpackAction(ZZ_ACTION_PACKED_0, offset, result);
     return result;
@@ -78,11 +81,13 @@ class Yylex {
   private static final int [] ZZ_ROWMAP = zzUnpackRowMap();
 
   private static final String ZZ_ROWMAP_PACKED_0 =
-    "\0\0\0\10\0\20\0\20\0\30\0\40\0\20\0\20"+
-    "\0\20\0\30\0\20\0\50";
+    "\0\0\0\15\0\32\0\47\0\64\0\101\0\116\0\47"+
+    "\0\133\0\150\0\47\0\165\0\202\0\133\0\217\0\64"+
+    "\0\234\0\251\0\266\0\303\0\47\0\47\0\47\0\47"+
+    "\0\47\0\47\0\47\0\47";
 
   private static int [] zzUnpackRowMap() {
-    int [] result = new int[12];
+    int [] result = new int[28];
     int offset = 0;
     offset = zzUnpackRowMap(ZZ_ROWMAP_PACKED_0, offset, result);
     return result;
@@ -105,12 +110,18 @@ class Yylex {
   private static final int [] ZZ_TRANS = zzUnpackTrans();
 
   private static final String ZZ_TRANS_PACKED_0 =
-    "\1\4\1\5\2\4\1\6\1\4\2\0\3\7\1\10"+
-    "\1\7\2\11\1\7\11\0\2\12\1\13\5\0\1\14"+
-    "\7\0\2\14\5\0";
+    "\1\4\1\5\2\4\1\6\1\7\4\4\3\5\5\10"+
+    "\1\11\1\12\3\13\3\10\4\14\1\15\1\16\1\17"+
+    "\2\14\1\0\3\14\16\0\2\20\1\21\6\0\3\20"+
+    "\1\0\1\22\10\0\3\22\1\0\1\23\10\0\3\23"+
+    "\1\0\1\24\10\0\3\24\7\0\1\25\5\0\4\14"+
+    "\3\0\2\14\1\0\3\14\7\0\1\26\11\0\1\27"+
+    "\1\30\1\0\1\25\2\0\1\31\1\32\1\33\4\0"+
+    "\1\34\11\0\2\22\1\4\6\0\3\22\1\0\2\23"+
+    "\7\0\3\23\1\0\2\24\7\0\3\24";
 
   private static int [] zzUnpackTrans() {
-    int [] result = new int[48];
+    int [] result = new int[208];
     int offset = 0;
     offset = zzUnpackTrans(ZZ_TRANS_PACKED_0, offset, result);
     return result;
@@ -148,10 +159,11 @@ class Yylex {
   private static final int [] ZZ_ATTRIBUTE = zzUnpackAttribute();
 
   private static final String ZZ_ATTRIBUTE_PACKED_0 =
-    "\2\0\1\10\1\11\2\1\3\11\1\0\1\11\1\1";
+    "\3\0\1\11\3\1\1\11\2\1\1\11\2\1\1\0"+
+    "\1\1\1\0\1\1\1\0\2\1\10\11";
 
   private static int [] zzUnpackAttribute() {
-    int [] result = new int[12];
+    int [] result = new int[28];
     int offset = 0;
     offset = zzUnpackAttribute(ZZ_ATTRIBUTE_PACKED_0, offset, result);
     return result;
@@ -252,7 +264,7 @@ class Yylex {
     char [] map = new char[0x110000];
     int i = 0;  /* index in packed string  */
     int j = 0;  /* index in unpacked array */
-    while (i < 92) {
+    while (i < 100) {
       int  count = packed.charAt(i++);
       char value = packed.charAt(i++);
       do map[j++] = value; while (--count > 0);
@@ -550,38 +562,88 @@ class Yylex {
             { System.out.print(yytext());
             } 
             // fall through
-          case 7: break;
+          case 17: break;
           case 2: 
             { valorVar += yytext();
             } 
             // fall through
-          case 8: break;
+          case 18: break;
           case 3: 
-            { 
-            } 
-            // fall through
-          case 9: break;
-          case 4: 
             { TablaSimbolos.put(nombreVar, valorVar);
                                 yybegin(YYINITIAL);
             } 
             // fall through
-          case 10: break;
+          case 19: break;
+          case 4: 
+            { valorVar += yytext() ;
+            } 
+            // fall through
+          case 20: break;
           case 5: 
-            // lookahead expression with fixed lookahead length
-            zzMarkedPos = Character.offsetByCodePoints
-                (zzBufferL, zzStartRead, zzEndRead - zzStartRead, zzMarkedPos, -1);
-            { nombreVar=yytext();
+            { TablaSimbolos.put(nombreVar, valorVar);     
+                                yybegin(YYINITIAL);
+            } 
+            // fall through
+          case 21: break;
+          case 6: 
+            { valorVar += '\\' ;
+            } 
+            // fall through
+          case 22: break;
+          case 7: 
+            { nombreVar=yytext().substring(0, yytext().length() - 1);
                                 valorVar="";
                                 yybegin(VALOR);
             } 
             // fall through
-          case 11: break;
-          case 6: 
+          case 23: break;
+          case 8: 
             { System.out.print(TablaSimbolos.get(yytext()));
             } 
             // fall through
-          case 12: break;
+          case 24: break;
+          case 9: 
+            { valorVar+=(TablaSimbolos.get(yytext()));
+            } 
+            // fall through
+          case 25: break;
+          case 10: 
+            { valorVar += ';' ;
+            } 
+            // fall through
+          case 26: break;
+          case 11: 
+            { valorVar += '\"' ;
+            } 
+            // fall through
+          case 27: break;
+          case 12: 
+            { valorVar += '$' ;
+            } 
+            // fall through
+          case 28: break;
+          case 13: 
+            { valorVar += '\t' ;
+            } 
+            // fall through
+          case 29: break;
+          case 14: 
+            { valorVar += '\n' ;
+            } 
+            // fall through
+          case 30: break;
+          case 15: 
+            { valorVar += '\r' ;
+            } 
+            // fall through
+          case 31: break;
+          case 16: 
+            { nombreVar=yytext().substring(0, yytext().length() - 2) ; 
+                                valorVar="";
+                                yybegin(STRING);
+            } 
+            // fall through
+          case 32: break;
           default:
             zzScanError(ZZ_NO_MATCH);
         }
