@@ -1,0 +1,4 @@
+class pepe{
+    v1=" que tal";
+    System.out.print("Hola"+v1);
+}
