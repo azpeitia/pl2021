@@ -30,14 +30,15 @@ class Yylex {
    * l is of the form l = 2*k, k a non negative integer
    */
   private static final int ZZ_LEXSTATE[] = { 
-     0,  0,  1,  1,  1,  1,  1,  1,  1, 1
+     0,  0,  1,  1,  2,  2,  3,  3,  4, 4
   };
 
   /** 
    * Translates characters to character classes
    */
   private static final String ZZ_CMAP_PACKED = 
-    "\11\0\2\1\25\0\1\1\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffef\0";
+    "\11\0\1\6\1\5\25\0\1\6\1\0\1\1\7\0\1\3\4\0"+
+    "\1\2\54\0\1\4\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffb3\0";
 
   /** 
    * Translates characters to character classes
@@ -50,10 +51,11 @@ class Yylex {
   private static final int [] ZZ_ACTION = zzUnpackAction();
 
   private static final String ZZ_ACTION_PACKED_0 =
-    "\2\0\1\1\1\2";
+    "\5\0\1\1\1\2\1\1\1\3\1\4\2\5\2\6"+
+    "\1\1\1\7\1\10\1\0\1\11";
 
   private static int [] zzUnpackAction() {
-    int [] result = new int[4];
+    int [] result = new int[19];
     int offset = 0;
     offset = zzUnpackAction(ZZ_ACTION_PACKED_0, offset, result);
     return result;
@@ -78,10 +80,12 @@ class Yylex {
   private static final int [] ZZ_ROWMAP = zzUnpackRowMap();
 
   private static final String ZZ_ROWMAP_PACKED_0 =
-    "\0\0\0\2\0\2\0\2";
+    "\0\0\0\7\0\16\0\25\0\34\0\43\0\43\0\52"+
+    "\0\43\0\43\0\43\0\61\0\43\0\61\0\70\0\43"+
+    "\0\77\0\70\0\43";
 
   private static int [] zzUnpackRowMap() {
-    int [] result = new int[4];
+    int [] result = new int[19];
     int offset = 0;
     offset = zzUnpackRowMap(ZZ_ROWMAP_PACKED_0, offset, result);
     return result;
@@ -104,10 +108,13 @@ class Yylex {
   private static final int [] ZZ_TRANS = zzUnpackTrans();
 
   private static final String ZZ_TRANS_PACKED_0 =
-    "\1\3\1\4\2\0";
+    "\1\6\1\7\1\10\4\6\5\11\1\12\1\6\3\13"+
+    "\1\14\1\13\2\6\3\15\1\16\1\15\3\6\1\12"+
+    "\2\6\1\17\2\6\11\0\1\20\1\21\5\0\1\12"+
+    "\5\0\1\6\2\0\1\22\5\0\1\23\3\0";
 
   private static int [] zzUnpackTrans() {
-    int [] result = new int[4];
+    int [] result = new int[70];
     int offset = 0;
     offset = zzUnpackTrans(ZZ_TRANS_PACKED_0, offset, result);
     return result;
@@ -145,10 +152,11 @@ class Yylex {
   private static final int [] ZZ_ATTRIBUTE = zzUnpackAttribute();
 
   private static final String ZZ_ATTRIBUTE_PACKED_0 =
-    "\1\0\1\10\2\11";
+    "\5\0\2\11\1\1\3\11\1\1\1\11\2\1\1\11"+
+    "\1\1\1\0\1\11";
 
   private static int [] zzUnpackAttribute() {
-    int [] result = new int[4];
+    int [] result = new int[19];
     int offset = 0;
     offset = zzUnpackAttribute(ZZ_ATTRIBUTE_PACKED_0, offset, result);
     return result;
@@ -250,7 +258,7 @@ class Yylex {
     char [] map = new char[0x110000];
     int i = 0;  /* index in packed string  */
     int j = 0;  /* index in unpacked array */
-    while (i < 42) {
+    while (i < 60) {
       int  count = packed.charAt(i++);
       char value = packed.charAt(i++);
       do map[j++] = value; while (--count > 0);
@@ -462,7 +470,6 @@ class Yylex {
       zzEOFDone = true;
         System.out.println("//  "+c1+"\n/*  "+c2+"\n/** "+c3);
 
-
     }
   }
 
@@ -560,15 +567,50 @@ class Yylex {
       else {
         switch (zzAction < 0 ? zzAction : ZZ_ACTION[zzAction]) {
           case 1: 
-            { c1++;c2++;c3++;
-            } 
-            // fall through
-          case 3: break;
-          case 2: 
             { 
             } 
             // fall through
-          case 4: break;
+          case 10: break;
+          case 2: 
+            { yybegin(STRING);
+            } 
+            // fall through
+          case 11: break;
+          case 3: 
+            { c1++;
+            } 
+            // fall through
+          case 12: break;
+          case 4: 
+            { yybegin(YYINITIAL);
+            } 
+            // fall through
+          case 13: break;
+          case 5: 
+            { c2++;
+            } 
+            // fall through
+          case 14: break;
+          case 6: 
+            { c3++;
+            } 
+            // fall through
+          case 15: break;
+          case 7: 
+            { yybegin(COM1);
+            } 
+            // fall through
+          case 16: break;
+          case 8: 
+            { yybegin(COM2);
+            } 
+            // fall through
+          case 17: break;
+          case 9: 
+            { yybegin(COM3);
+            } 
+            // fall through
+          case 18: break;
           default:
             zzScanError(ZZ_NO_MATCH);
         }

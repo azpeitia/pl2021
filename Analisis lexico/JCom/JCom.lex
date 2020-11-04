@@ -26,20 +26,53 @@
 
 %%
 
-(\/\/)     {
+\"          {
+                yybegin(STRING);
+            }
 
-
-}
+(\/\/)      {
+                yybegin(COM1);
+            }
 (\/\*)      {
-
-
-}
+                yybegin(COM2);
+            }
 (\/\*\*)    {
-
-    
-}
+                yybegin(COM3);
+            }
 [^]         {}
 
 
+<STRING>{
+
+\"  {yybegin(YYINITIAL);}
+(\\)+\"     {}
+
+[^] {}
+
+}
+
+<COM1>{
+
+\n  {yybegin(YYINITIAL);}
+[\ \t]    {}
+[^]     {c1++;}
+
+}
+
+<COM2>{
+
+\*\/    {yybegin(YYINITIAL);}
+[\ \n\t]    {}
+[^]     {c2++;}
+
+}
+
+<COM3>{
+
+\*\/    {yybegin(YYINITIAL);}
+[\ \n\t]    {}
+[^]     {c3++;}
+
+}
 
 
