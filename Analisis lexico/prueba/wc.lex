@@ -1,3 +1,5 @@
+/*
+
 Twitter es una red social con casi 15 años en activo. La idea básica de Twitter es el microblogging, 
 es decir, publicaciones de entradas de muy corta longitud.
 
@@ -74,37 +76,47 @@ En respuesta a @profesores #PL #pl #informatica #teams
 
 NOTA: Para este ejercicio se debe enviar un solo fichero Tweets.zip que se debe contener todos los ficheros 
 necesarios para compilarar y ejecutarar segun las instrucciones que se detallan en este enunciado
-
+*/
 
 %%
+%{
     String str="";
-    int aux="";
+    int aux=0;
     int nl=0;       //numero de caracteres
     int nh=0;       //numero de hashtags
     int nc=0;       //numero de menciones
     int ne=0;       //numero de enlaces
     //toLowerCase() //funcion para pasar a minusculas
+%}
 %int
+
+%eof{
+    System.out.println("\nnumero de caracteres: "+nl);
+    System.out.println("\nnumero de hashtags: "+nh);
+    System.out.println("\nnumero de citas: "+nc);
+    System.out.println("\nnumero de enlances: "+ne);
+    TablaSimbolos.getAll();
+%eof}
 
 %%
 \#[a-zA-Z0-9]*      { 
-                        nl+=yytext.length();
+                        nl+=yytext().length();
                         nh++;
-                        str=yytext.toLowerCase();
+                        str=yytext().toLowerCase();
                         aux=TablaSimbolos.get(str);
                         aux++;
                         TablaSimbolos.put(str,aux);
                     }
 
 \@[a-zA-Z_0-9]*[a-zA-Z][a-zA-Z_0-9]*    {
-                                            nl+=yytext.length();
+                                            nl+=yytext().length();
                                             nc++;
                                         }
 (https?:\/\/)[a-zA-Z_\-0-9]+\.[a-zA-Z_\-0-9]+([\/\.][a-zA-Z_\-0-9]+)*   {
-                                                                            nl+=yytext.length();
+                                                                            nl+=yytext().length();
                                                                             ne++;
                                                                         }
 [\ \n\t]+       {
-                    nl+=yytext.length();
+                    nl+=yytext().length();
                 }
-[^]             {nl++}       
+[^]             {nl++;}       

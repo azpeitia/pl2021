@@ -14,7 +14,7 @@ public class wc {
                 Yylex lex = new Yylex(new FileReader(arg[0]));
                 lex.yylex();
                 
-                System.out.println(nl+"\t"+np+"\t"+nc+"\t"+arg[0]);
+                //System.out.println(nl+"\t"+np+"\t"+nc+"\t"+arg[0]);
             
                 
 	        } catch (IOException e) {
