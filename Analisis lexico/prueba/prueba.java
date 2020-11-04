@@ -1,7 +1,7 @@
 import java.io.FileReader;
 import java.io.IOException;
 
-public class wc {
+public class prueba {
     public static int nl=0;
     public static int np=0;
     public static int nc=0;
