@@ -1,0 +1,27 @@
+Sea la gramatica:
+
+       S  →  A$
+       A  →  ε
+       A  →  AB
+       B  →  cb
+       B  →  cBb
+	  
+	  
+
+Escribir TODAS las cadenas del lenguaje de longitud 3 (incluyendo en la longitud el simbolo $)
+cb$
+
+
+Escribir TODAS las cadenas del lenguaje de longitud 5 (incluyendo en la longitud el simbolo $)
+cbcb$ ccbb$
+
+
+Escribir el contenido de la tabla de analisis LL1. En caso de colisión escribir TODAS las cadenas.
+
+tablaLL1(A,b) = ...
+
+VACIO
+
+Escribir el contenido de la tabla de analisis LL1. En caso de colisión escribir TODAS las cadenas.
+
+tablaLL1(B,c) = ...

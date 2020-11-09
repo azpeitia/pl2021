@@ -1,0 +1,66 @@
+    
+	S' -> S$
+    S  -> aSe
+    S  -> B
+    B  -> bBe
+    B  -> C
+    C  -> cCe
+    C  -> d
+
+¿Que símbolos pertenecen a CABECERA(S)?
+a b c d
+
+¿Que símbolos pertenecen a CABECERA(CB)?
+c d
+
+¿Que símbolos pertenecen a SIGUIENTE(B)?
+e $
+
+    S' -> S$
+    S  -> ABBA
+    A  -> a
+    A  -> ε
+    B  -> b
+    B  -> ε
+
+¿Que símbolos pertenecen a CABECERA(S)?
+a b EPSILON
+
+¿Que símbolos pertenecen a CABECERA(A)?
+a EPSILON
+
+¿Que símbolos pertenecen a SIGUIENTE(B)?
+a b $
+
+¿Que símbolos pertenecen a CABECERA(S)?
+a b c 
+
+¿Que símbolos pertenecen a CABECERA(AB)?
+a b EPSILON
+
+¿Que símbolos pertenecen a SIGUIENTE(A)?
+b c
+
+    S' -> S$
+    S  -> Ab
+    A  -> a
+    A  -> B
+    A  -> ε
+    B  -> b
+    B  -> ε
+
+¿Que símbolos pertenecen a CABECERA(S)?
+a b
+
+¿Que símbolos pertenecen a CABECERA(BaB)?
+b a
+
+¿Que símbolos pertenecen a SIGUIENTE(A)?
+b
+
+
+
+
+
+
+

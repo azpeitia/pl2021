@@ -1,0 +1,112 @@
+
+S' -> S$
+S  -> SAB
+S  -> SBC
+S  -> ε
+A  -> aAa
+A  -> ε
+B  -> bB
+B  -> ε
+C  -> cC
+C  -> ε
+
+¿Que simbolos pertenecen a CABECERA(A)?
+a ε
+
+¿Que simbolos pertenecen a CABECERA(B)?
+v ε
+
+¿Que simbolos pertenecen a CABECERA(C)?
+c ε
+
+¿Que simbolos pertenecen a CABECERA(S)?
+a b c ε
+
+¿Que simbolos pertenecen a CABECERA(SAB)?
+a b c ε
+
+¿Que simbolos pertenecen a CABECERA(SBC)?
+a b c ε
+
+¿Que simbolos pertenecen a SIGUIENTE(A)?
+a b c $
+
+¿Que simbolos pertenecen a SIGUIENTE(B)?
+a b c $
+
+¿Que simbolos pertenecen a SIGUIENTE(S)?
+$ a b c 
+
+
+S' -> S$
+S  -> ABS
+S  -> BCS
+S  -> ε
+A  -> AA
+A  -> a
+B  -> bB
+B  -> ε
+C  -> cC
+C  -> ε
+
+¿Que simbolos pertenecen a CABECERA(A)?
+a
+
+¿Que simbolos pertenecen a CABECERA(B)?
+b ε
+
+¿Que simbolos pertenecen a CABECERA(C)?
+c ε
+
+¿Que simbolos pertenecen a CABECERA(S)?
+a b c ε
+
+¿Que simbolos pertenecen a CABECERA(ABS)?
+a
+
+¿Que simbolos pertenecen a CABECERA(BCS)?
+a b c ε
+
+¿Que simbolos pertenecen a SIGUIENTE(A)?
+b $ a c 
+
+¿Que simbolos pertenecen a SIGUIENTE(B)?
+b $ a c 
+
+¿Que simbolos pertenecen a SIGUIENTE(S)?
+$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
